@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6ea10658-4056-49e2-b503-494d4ea322f2}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>HC12XmitRecvRemote</RootNamespace>
+    <ProjectName>HC12XmitRecvRemote</ProjectName>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{D51BCBC9-82E9-4017-911E-C93873C4EA2B}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <LinuxIncludePath>c:\visualmicro\ignore</LinuxIncludePath>
+    <wiringPiIncludePath>c:\visualmicro\pi-ignore</wiringPiIncludePath>
+    <TargetOSAndVersion>Arduino</TargetOSAndVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="ElapsedMillis.cpp" />
+    <ClCompile Include="HC12XmitRecvRemote.ino">
+      <FileType>CppCode</FileType>
+      <DeploymentContent>true</DeploymentContent>
+    </ClCompile>
+    <ClCompile Include="OledHelper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\arduino folders read me.txt">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectCapability Include="VisualMicro" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ElapsedMillis.h" />
+    <ClInclude Include="OledHelper.h" />
+    <ClInclude Include="__vm\.HC12XmitRecvRemote.vsarduino.h" />
+  </ItemGroup>
+  <PropertyGroup>
+    <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\\Users\\efigarsky\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\megaavr\\1.8.8\\cores\\arduino\api\deprecated;C:\\Users\\efigarsky\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\megaavr\\1.8.8\\cores\\arduino;C:\\Users\\efigarsky\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\megaavr\\1.8.8\\variants\\nona4809;c:\users\efigarsky\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\lib\gcc\avr\7.3.0\include;c:\users\efigarsky\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\lib\gcc\avr\7.3.0\include-fixed;c:\users\efigarsky\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\avr\include;C:\Users\efigarsky\AppData\Local\Arduino15\packages\arduino\hardware\megaavr\1.8.8\libraries\SPI\src;C:\Users\efigarsky\AppData\Local\Arduino15\packages\arduino\hardware\megaavr\1.8.8\libraries\Wire\src;C:\Users\efigarsky\AppData\Local\Arduino15\packages\arduino\hardware\megaavr\1.8.8\libraries\Wire\src\utility;C:\Users\efigarsky\Documents\Arduino\libraries\Adafruit_GFX_Library;C:\Users\efigarsky\Documents\Arduino\libraries\Adafruit_SSD1306;C:\Users\efigarsky\AppData\Local\Arduino15\packages\arduino\hardware\megaavr\1.8.8\libraries\SoftwareSerial\src</IncludePath>
+    <RemoteCCompileToolExe>C:\\Users\\efigarsky\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5\bin\avr-g++</RemoteCCompileToolExe>
+    <RemoteCppCompileToolExe>C:\\Users\\efigarsky\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5\bin\avr-g++</RemoteCppCompileToolExe>
+    <ValidateArchitecture>false</ValidateArchitecture>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\\Users\\efigarsky\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\megaavr\\1.8.8\\cores\\arduino\api\deprecated;C:\\Users\\efigarsky\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\megaavr\\1.8.8\\cores\\arduino;C:\\Users\\efigarsky\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\megaavr\\1.8.8\\variants\\nona4809;c:\users\efigarsky\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\lib\gcc\avr\7.3.0\include;c:\users\efigarsky\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\lib\gcc\avr\7.3.0\include-fixed;c:\users\efigarsky\appdata\local\arduino15\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\avr\include;C:\Users\efigarsky\AppData\Local\Arduino15\packages\arduino\hardware\megaavr\1.8.8\libraries\SPI\src;C:\Users\efigarsky\AppData\Local\Arduino15\packages\arduino\hardware\megaavr\1.8.8\libraries\Wire\src;C:\Users\efigarsky\AppData\Local\Arduino15\packages\arduino\hardware\megaavr\1.8.8\libraries\Wire\src\utility;C:\Users\efigarsky\Documents\Arduino\libraries\Adafruit_GFX_Library;C:\Users\efigarsky\Documents\Arduino\libraries\Adafruit_SSD1306;C:\Users\efigarsky\AppData\Local\Arduino15\packages\arduino\hardware\megaavr\1.8.8\libraries\SoftwareSerial\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <GccToolChain>C:\\Users\\efigarsky\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5\bin\avr-g++</GccToolChain>
+      <CppLanguageStandard>gnu++11</CppLanguageStandard>
+      <CLanguageStandard>gnu11</CLanguageStandard>
+      <CAdditionalWarning />
+      <CppAdditionalWarning />
+      <ForcedIncludeFiles>c:\program files\microsoft visual studio\2022\professional\common7\ide\extensions\lurodfxk.kwv\Micro Platforms\default\vm-intelli-pre.h;C:\Users\efigarsky\AppData\Local\Temp\VMBuilds\HC12XmitRecvRemote\nona4809\Debug\.vmintelli\76781b05ebc1d70d1f4d1565f4647471\vm-intelli-gcc-defines.h;c:\program files\microsoft visual studio\2022\professional\common7\ide\extensions\lurodfxk.kwv\Micro Platforms\default\vm-intelli-post.h;$(ProjectDir)__vm\.HC12XmitRecvRemote.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <UndefineAllPreprocessorDefinitions>true</UndefineAllPreprocessorDefinitions>
+      <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>_VMICRO_INTELLISENSE;__AVR_atmega4809__;__MEGAAVR_ATmega4809__;__AVR_ATmega4809__;_VMDEBUG=1;F_CPU=16000000L;ARDUINO=108010;ARDUINO_AVR_NANO_EVERY;ARDUINO_ARCH_MEGAAVR;AVR_NANO_4809_328MODE;MILLIS_USE_TIMERB3;NO_EXTERNAL_I2C_PULLUP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties arduino.upload.port="COM6" config.Debug.customdebug_nona4809_debugger_type="universal" config.Debug.customdebug_nona4809_vm_disable_optimization="vm_disable_opt_default" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
