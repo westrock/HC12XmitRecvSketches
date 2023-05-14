@@ -17,16 +17,18 @@ protected:
 	 unsigned long _startTime;
 
 public:
+	ElapsedMillisClass();
+	ElapsedMillisClass(unsigned long newStart);
 	void start();
-	void ElapsedMillisClass::setStart(unsigned long newStart);
-	unsigned long ElapsedMillisClass::getStart();
-	unsigned long ElapsedMillisClass::elapsedMillis();
-	unsigned long ElapsedMillisClass::elapsedMillis(unsigned long now);
-	unsigned long ElapsedMillisClass::elapsedSeconds();
-	unsigned long ElapsedMillisClass::elapsedSeconds(unsigned long now);
+	void setStart(unsigned long newStart);
+	unsigned long getStart();
+	unsigned long elapsedMillis();
+	unsigned long elapsedMillis(unsigned long now);
+	unsigned long elapsedSeconds();
+	unsigned long elapsedSeconds(unsigned long now);
 
-	static unsigned long ElapsedMillisClass::elapsedMillis(unsigned long fromTime, unsigned long toTime);
-	static unsigned long ElapsedMillisClass::elapsedSeconds(unsigned long fromTime, unsigned long toTime);
+	static unsigned long elapsedMillis(unsigned long likelyCurrentTime, unsigned long likelyStartTime);
+	static unsigned long elapsedSeconds(unsigned long likelyCurrentTime, unsigned long likelyStartTime);
 };
 
 extern ElapsedMillisClass ElapsedMillis;

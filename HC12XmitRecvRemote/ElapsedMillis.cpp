@@ -4,6 +4,18 @@
 
 #include "ElapsedMillis.h"
 
+ElapsedMillisClass::ElapsedMillisClass()
+{
+	_startTime = millis();
+}
+
+
+ElapsedMillisClass::ElapsedMillisClass(unsigned long newStart)
+{
+	_startTime = newStart;
+}
+
+
 void ElapsedMillisClass::start()
 {
 	_startTime = millis();
@@ -32,13 +44,16 @@ unsigned long ElapsedMillisClass::elapsedMillis(unsigned long now) {
 }
 
 
-unsigned long ElapsedMillisClass::elapsedMillis(unsigned long fromTime, unsigned long toTime) {
-	if (toTime >= fromTime) {
-		return toTime - fromTime;
+unsigned long ElapsedMillisClass::elapsedMillis(unsigned long likelyCurrentTime, unsigned long likelyStartTime) {
+	unsigned long deltaMillis;
+
+	if (likelyCurrentTime >= likelyStartTime) {
+		deltaMillis = likelyCurrentTime - likelyStartTime;
 	}
 	else {
-		return toTime + (ULONG_MAX - fromTime);
+		deltaMillis = likelyCurrentTime + (ULONG_MAX - likelyStartTime);
 	}
+	return deltaMillis;
 }
 
 
@@ -52,8 +67,8 @@ unsigned long ElapsedMillisClass::elapsedSeconds(unsigned long now) {
 }
 
 
-unsigned long ElapsedMillisClass::elapsedSeconds(unsigned long fromTime, unsigned long toTime) {
-	return elapsedMillis(fromTime, toTime) / 1000L;
+unsigned long ElapsedMillisClass::elapsedSeconds(unsigned long likelyCurrentTime, unsigned long likelyStartTime) {
+	return elapsedMillis(likelyCurrentTime, likelyStartTime) / 1000L;
 }
 
 

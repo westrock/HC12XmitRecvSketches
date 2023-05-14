@@ -27,6 +27,9 @@
     <ClCompile Include="ElapsedMillis.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Fletcher16.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.HC12XmitRecvRemote.vsarduino.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ElapsedMillis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Fletcher16.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -21,15 +21,16 @@ class OledHelperClass
 	 void printlnCharsCommon(bool isPrintLn, const char* buffer, bool clear = false, int16_t col = -1, int16_t row = -1);
 
  public:
-	void init(Adafruit_SSD1306 *withDisplay);
-	void startup(bool showSplash = false);
-	void splash(char* buffer);
-	void printlnChars(const char* buffer, bool clear = false, int16_t col = -1, int16_t row = -1);
-	void printChars(const char* buffer, bool clear = false, int16_t col = -1, int16_t row = -1);
-	void clear();
+	 void init(Adafruit_SSD1306* withDisplay);
+	 void startup(bool showSplash = false);
+	 void setCursor(int16_t col = 0, int16_t row = 0);
+	 void splash(char* buffer);
+	 void printlnChars(const char* buffer, bool clear = false, int16_t col = -1, int16_t row = -1);
+	 void printChars(const char* buffer, bool clear = false, int16_t col = -1, int16_t row = -1);
+	 void clear();
 };
 
-extern OledHelperClass OledHelper;
+//extern OledHelperClass OledHelper;
 
 #endif
 

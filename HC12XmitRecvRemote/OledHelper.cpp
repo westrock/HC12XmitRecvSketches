@@ -14,13 +14,14 @@ void OledHelperClass::splash(char* buffer)
 {
 	if (!_display) return;
 
+	_display->clearDisplay();
 	_display->print(buffer);
 	_display->display();
 	for (int i = 0; i < 10; i++) {
 		_display->dim(false);
-		delay(500);
+		delay(250);
 		_display->dim(true);
-		delay(500);
+		delay(250);
 	}
 	_display->clearDisplay();
 	_display->display();
@@ -91,8 +92,21 @@ void OledHelperClass::printlnCharsCommon(bool isPrintLn, const char* buffer, boo
 
 	isPrintLn ? _display->println(buffer) : _display->print(buffer);
 	_display->display();
+
+	Serial.print("Display on oled: '");
+	Serial.print(buffer);
+	Serial.println("'");
 }
 
 
-OledHelperClass OledHelper;
+/// <summary>Display string on OLED display.</summary>
+/// <param name="col">use to set column</param>
+/// <param name="row">use to set row</param>
+void OledHelperClass::setCursor(int16_t col = 0, int16_t row = 0) {
+	if (!_display) return;
+
+	_display->setCursor(col, row);
+}
+
+
 
